@@ -36,11 +36,11 @@ const config = {
 
   // Message that appears on the result card
   winningMessage:
-    "A surprise getaway to the beautiful beaches of Đà Nẵng awaits — pack your dreams, my love. Sun, salt, and us against the world.",
+    "Chúc mừng em yêu đã bốc trúng giải thưởng độc đắc 'Vé máy bay đi Đà Nẵng'!! ",
 
   // Hidden second-screen message revealed by the "Open my note" button
   hiddenMessage:
-    "Every minute spent with you feels like a quiet kind of magic. Thank you for being you. Happy birthday, my love — here's to a year as wonderful as you are. 💕",
+    "Mỗi một giây phút ở bên em, anh luôn cảm thấy là người được yêu chiều nhất trên thế gian này. Anh đã nói rằng chuyến Đà Nẵng năm nay sẽ split 50/50, nhưng vì em đã lỡ trúng độc đắc rồi nên cho anh 'bao' em vé máy bay nhé!! Chúc mừng sinh nhật em iu",
 
   // Spin animation duration in ms (must match CSS .wheel transition-duration)
   spinDuration: 4600,
