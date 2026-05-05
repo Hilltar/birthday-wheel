@@ -15,17 +15,17 @@ const config = {
   options: [
     "Spa Day",
     "Cute Outfit",
-    "Movie Night",
-    "Beach Picnic",
-    "Concert Tickets",
-    "Cooking Class",
-    "Mystery Gift",
-    "Photo Shoot",
-    "Bookstore Date",
-    "Dessert Tour",
-    "Rooftop Dinner",
-    "Sunrise Walk",
-    "Trip to Da Nang",   // <-- the predetermined winner
+    "500 cá",
+    "1 nụ hôn nồng cháy",
+    "Vé concert Sơn Tùng",
+    "Đi mua mỹ phẩm",
+    "Món quà bí mật",
+    "2 nụ hôn cháy nồng",
+    "2 cái ôm",
+    "1 cái cõng",
+    "Túi tote mới",
+    "1 cái ôm",
+    "Vé máy bay đi Đà Nẵng",   // <-- the predetermined winner
   ],
 
   // Optional per-option emoji (must be the same length as `options`)
