@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Happy Birthday — A Little Spin Just For You</title>
+  <meta name="description" content="A birthday surprise, spun just for you." />
+
+  <!-- Fonts: Cormorant (display, romantic) + Manrope (body, refined) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Soft floating decorations in the background -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="petal" style="--d:0s; --x:8%;  --s:1.0">✿</span>
+    <span class="petal" style="--d:3s; --x:24%; --s:0.7">✿</span>
+    <span class="petal" style="--d:6s; --x:44%; --s:1.2">✿</span>
+    <span class="petal" style="--d:1.5s; --x:62%; --s:0.9">✿</span>
+    <span class="petal" style="--d:4.5s; --x:80%; --s:1.1">✿</span>
+    <span class="petal" style="--d:7.5s; --x:92%; --s:0.8">✿</span>
+  </div>
+
+  <main class="page">
+    <header class="header">
+      <span class="eyebrow">A little surprise · Spun just for you</span>
+      <h1 class="title">Happy <em>Birthday</em></h1>
+      <div class="ornament" aria-hidden="true">
+        <span></span><span class="diamond">◆</span><span></span>
+      </div>
+      <p class="subtitle">Give the wheel a spin to discover what fate has saved for today.</p>
+    </header>
+
+    <section class="wheel-stage" aria-label="Birthday surprise wheel">
+      <div class="wheel-container">
+        <!-- Pointer at the top -->
+        <div class="pointer" aria-hidden="true">
+          <svg viewBox="0 0 40 50" width="100%" height="100%">
+            <path d="M 20 50 L 4 8 Q 20 0 36 8 Z" fill="url(#pointerGrad)" stroke="#fff" stroke-width="1.5"/>
+            <defs>
+              <linearGradient id="pointerGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#c9a961"/>
+                <stop offset="100%" stop-color="#8b3a4e"/>
+              </linearGradient>
+            </defs>
+            <circle cx="20" cy="14" r="3" fill="#fff" opacity="0.9"/>
+          </svg>
+        </div>
+
+        <!-- The wheel SVG is rendered by JS -->
+        <svg
+          id="wheel"
+          class="wheel"
+          viewBox="-110 -110 220 220"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="Wheel of surprises"
+        ></svg>
+
+        <!-- Center spin button -->
+        <button class="spin-btn" id="spinBtn" aria-label="Spin the wheel">
+          <span class="spin-btn-inner">
+            <span class="spin-btn-text">SPIN</span>
+            <span class="spin-btn-sub">↻</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="signature">made with <span class="heart">♥</span> for you</p>
+    </footer>
+  </main>
+
+  <!-- Result modal -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+
+      <div class="modal-frame">
+        <div class="modal-eyebrow">The wheel has spoken</div>
+
+        <h2 class="modal-title" id="resultTitle">You got</h2>
+
+        <div class="result-card">
+          <div class="result-emoji" id="resultEmoji">✨</div>
+          <div class="result-option" id="resultOption">—</div>
+        </div>
+
+        <p class="result-message" id="resultMessage"></p>
+
+        <button class="reveal-btn" id="revealBtn">
+          <span>Open my note</span>
+          <span class="reveal-arrow">→</span>
+        </button>
+
+        <div class="hidden-note" id="hiddenNote">
+          <div class="hidden-ornament" aria-hidden="true">— ✿ —</div>
+          <p id="hiddenText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
